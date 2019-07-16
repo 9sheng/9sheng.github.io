@@ -4,3 +4,6 @@ main:
   url: /categories/
 - title: "标签"
   url: /tags/
+- title: "时间"
+  url: /year-archive/
+
