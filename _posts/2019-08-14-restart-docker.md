@@ -8,14 +8,14 @@ tags:
 ---
 
 # 重启 docker
-docker 有问题时，想要清空 docker 数据重启服务，执行以下操作。
+dockerd 有问题时，想要清空 docker 数据重启服务，可以执行以下操作。
 ```sh
-systemctl stop docker      # 停止 docker 服务
-dmsetup udevcomplete_all   # 释放未完成的磁盘操作
-rm -rf /var/lib/docker/*   # 清空 docker 数据
-systemctl start docker     # 重启 docker服务
+systemctl stop docker     # 停止 docker 服务
+dmsetup udevcomplete_all  # 释放未完成的磁盘操作
+rm -rf /var/lib/docker/*  # 清空 docker 数据
+systemctl start docker    # 重启 docker 服务
 ```
-注：默认 docker 数据目录为 /var/lib/docker，根据实际情况修改。如有文件删除不了时，可能需要重启服务器
+注：docker 默认的数据目录为 /var/lib/docker（根据实际情况修改）。如有文件删除不了时，可能需要重启服务器。
 
 启动 docker 失败，报错：
 > devmapper: unable to take ownership of thin-pool (docker-thinpool) that already has used data blocks
@@ -60,8 +60,9 @@ dmsetup remove /dev/dm-2
 #!/bin/sh
 lvcreate --wipesignatures y -n thinpool docker -l 95%VG -y
 lvcreate --wipesignatures y -n thinpoolmeta docker -l 1%VG -y
-lvconvert -y --zero n -c 512k --thinpool docker/thinpool --poolmetadata docker/thinpoolmeta
-/bin/cp docker-thinpool.profile /etc/lvm/profile/docker-thinpool.profile
+lvconvert -y --zero n -c 512k --thinpool docker/thinpool \
+  --poolmetadata docker/thinpoolmeta
+\cp docker-thinpool.profile /etc/lvm/profile/docker-thinpool.profile
 lvchange --metadataprofile docker-thinpool docker/thinpool
 lvs -o+seg_monitor
 ```
