@@ -1,5 +1,5 @@
 ---
-title:      "场景英语4-绩效评估"
+title:      "场景英语: 绩效评估"
 date:       2026-04-25 13:29:29 -0700
 categories: English
 tags:
@@ -16,7 +16,7 @@ tags:
 ---
 
 - **Boss**: Let's go over your annual performance review. How do you feel about your work **over** the last year?
-- **Employee**: I've believe I've **met and exceeded** my goals, especially, in improving team efficiency.
+- **Employee**: I believe I've **met and exceeded** my goals, especially, in improving team efficiency.
 - **Boss**: Your **peer feedback** has been very positive as well. However, where do you see **room for improvement**?
 - **Employee**: I'd like to work on my **leadership skills moving forward**.
 - **Boss**: Great. Based on your **outstanding performance**, you'll be receiving your **full bonus**.

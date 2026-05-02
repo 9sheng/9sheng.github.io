@@ -1,5 +1,5 @@
 ---
-title:      "场景英语6-同步进度"
+title:      "场景英语: 同步进度"
 date:       2026-04-28 17:12:27 -0700
 categories: English
 tags:
