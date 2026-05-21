@@ -1,5 +1,5 @@
 ---
-title:      "English Example：Agreement & Approval"
+title:      "Agreement & Approval"
 date:       2026-05-15 15:17:27 -0700
 categories: English
 tags:
